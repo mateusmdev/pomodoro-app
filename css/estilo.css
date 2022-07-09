@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    /* font-size: 1em; */
+    /* color: white; */
+}
+.app{
+    /* border: 1px solid red; */
+    padding-top: 40px;
+    height: 100vh;
+    text-align: center;
+    background: rgb(0, 82, 150);
+    font-size: 1em;
+}
+.app h1{
+    color:#f79600;
+}
+.contador{
+    border: 7px solid #0088f8;
+    border-right: 7px solid #f79600;
+    /* box-shadow: 0px 0px 33px #0088f8, 0px 0px 55px rgb(0, 136, 248); */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    font-size: 2.3em;
+    background: rgba(0, 0, 0, .5);
+}
+.contador h3{
+    color: rgb(255, 255, 255, 0.7);
+}
+.break{
+    font-size: 1.4em;
+    color: #F79600;
+}
+.controle{
+    margin: 50px 0;
+}
+.controle button{
+    margin: 0 20px;
+    padding: 10px 35px;
+    outline: none;
+    /* background: #F79600; */
+    border: 2.5px solid #F79600;
+    /* border: none; */
+    color: #F79600;;
+    transition: 0.5s all ease;
+    font-weight: bold;
+    background: rgb(0, 82, 150);
+    cursor: pointer;
+}
+.controle button:hover{
+    /* opacity: 0.47; */
+    /* transform: rotateY(360deg) rotateX(360deg); */
+    color: rgba(185, 111, 0, 0.9);
+    border: 2.5px solid rgba(185, 111, 0, 0.9);
+}
+.sentido-horario{
+    /* transform: rotate(160deg); */
+    animation: rotacao-contador 1s infinite;
+    animation-timing-function: linear;
+}
+.sentido-anti-horario{
+    /* transform: rotate(-160deg); */
+    animation: rotacao-h3 1s infinite;
+    animation-timing-function: linear;
+}
+.pomodoro-time{
+    text-shadow: 0px 0px 7px rgba(0, 136, 248, 1), 0px 0px 7px white;
+}
+.break-time{
+    text-shadow: 0px 0px 7px rgb(248, 50, 0), 0px 0px 7px white;
+}
+.controle button.botao-desativado:hover{
+    color: #F79600;;
+    border: 2.5px solid #F79600;
+}
+@keyframes rotacao-contador{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+@keyframes rotacao-h3{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(-360deg)}
+}
